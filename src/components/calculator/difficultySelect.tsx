@@ -6,7 +6,7 @@ interface DifficultySelectProps {
 
 export default function DifficultySelect({ onDifficultyChange }: DifficultySelectProps) {
   
-  const [selectedDifficulty, setDifficulty] = useState(1.0);
+  const [selectedDifficulty, setDifficulty] = useState<number | "">("");
 
   const difficulties = [
     { displayName: "Easy", priceModifier: 0.85 },
@@ -23,7 +23,7 @@ export default function DifficultySelect({ onDifficultyChange }: DifficultySelec
 
   return (
     <select value = {selectedDifficulty} onChange = {handleChange}>
-      <option value="" disabled>
+      <option value="" hidden>
         Select a Difficulty 
       </option> 
       {difficulties.map((difficulty) => (
@@ -33,4 +33,4 @@ export default function DifficultySelect({ onDifficultyChange }: DifficultySelec
       ))}
     </select>
   )
-}
+} 

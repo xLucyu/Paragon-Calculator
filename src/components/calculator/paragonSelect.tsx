@@ -17,7 +17,10 @@ export default function ParagonSelect({ onParagonChange }: ParagonSelectProps) {
   }
 
   return (
-    <select value = {selectedParagon} onChange = {handleChange}>
+    <select value = {selectedParagon} onChange = {handleChange}> 
+      <option value="" hidden>
+        Select a Paragon 
+      </option>
       {Object.entries(paragons).map(([index, paragon]) => (
       <option key={index} value={index}>
         {paragon.name}
