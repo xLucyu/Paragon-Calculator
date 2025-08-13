@@ -8,7 +8,7 @@ interface ParagonSelectProps {
 
 export default function ParagonSelect({ onParagonChange }: ParagonSelectProps) {
   
-  const [ selectedParagon, setParagon ] = useState("");
+  const [ selectedParagon, setParagon ] = useState<string>("");
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const paragon = event.target.value;
