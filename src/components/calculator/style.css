@@ -1,0 +1,40 @@
+.select-wrapper {
+  position: relative;
+  width: 300px; /* matches your grid items */
+}
+
+.select-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding: 12px 40px 12px 16px;
+  border: 2px solid #3a3a3a;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1e1e1e, #292929);
+  color: white;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-in-out;
+}
+
+.select-wrapper select:hover,
+.select-wrapper select:focus {
+  border-color: #5a5a5a;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+/* Custom arrow */
+.select-wrapper::after {
+  content: '▼';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #aaa;
+  font-size: 12px;
+}
