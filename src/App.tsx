@@ -1,4 +1,7 @@
-import Header from './header'
+import {
+  Header,
+  Calculator
+} from "./components/index";
 
 export default function App() {
   
@@ -6,6 +9,7 @@ export default function App() {
     <>
       <div className="container">
         <Header/>
+        <Calculator/>
       </div>
     </>
   )

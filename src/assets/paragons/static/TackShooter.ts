@@ -1,7 +1,9 @@
+import { ParagonImages } from "../images";
+
 export const TackShooter = {
     name: "Crucible of Steel and Flame",
     price: 200000,
-    image: "",
+    image: ParagonImages.tack,
     attacks: [
         {
             name: "Blade",

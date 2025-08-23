@@ -1,7 +1,9 @@
+import { ParagonImages } from "../images";
+
 export const DartMonkey = {
     name: "Apex Plasma Master",
     price: 150000,
-    image: "",
+    image: ParagonImages.dart,
     attacks: [
         {
             name: "Plasma Ball",

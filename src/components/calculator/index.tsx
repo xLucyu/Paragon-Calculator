@@ -1,20 +1,19 @@
 import { useState } from "react";
 import DifficultySelect from "./difficultySelect";
 import ParagonSelect from "./paragonSelect";
-import type { Paragon } from "../../assets/paragons/interface";
+import PriceFields from "./inputFields";
+import type { Paragon } from "../../interfaces";
 
-export default function Calculator() {
+export function Calculator() {
 
   const [difficultyMultiplier, setDifficultyMultiplier] = useState(1.0);
   const [selectedParagon, setSelectedParagon] = useState<Paragon | null>(null);
 
-  const newPrice = selectedParagon ? (selectedParagon.price * difficultyMultiplier).toLocaleString() : 0; 
-
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
       <DifficultySelect onDifficultyChange={setDifficultyMultiplier}/>
       <ParagonSelect onParagonChange={setSelectedParagon}/>
-      <pre>New Price: ${newPrice} </pre>
+      <PriceFields difficultyMultiplier={difficultyMultiplier} selectedParagon={selectedParagon}/>
       <pre>{JSON.stringify(selectedParagon, null, 2)}</pre>
     </div>
   )

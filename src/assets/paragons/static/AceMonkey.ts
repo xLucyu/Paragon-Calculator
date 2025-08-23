@@ -1,7 +1,9 @@
+import { ParagonImages } from "../images";
+
 export const AceMonkey = {
     name: "Goliath Doomship",
     price: 900000,
-    image: "",
+    image: ParagonImages.ace,
     attacks: [
         {
             name: "Radial Darts",

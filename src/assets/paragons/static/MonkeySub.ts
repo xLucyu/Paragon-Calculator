@@ -1,6 +1,8 @@
+import { ParagonImages } from "../images";
+
 export const MonkeySub = {
     name: "Nautic Siege Core",
-    image: "",
+    image: ParagonImages.sub,
     price: 400000,
     attacks: [
         {

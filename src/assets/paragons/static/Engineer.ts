@@ -1,7 +1,9 @@
+import { ParagonImages } from "../images";
+
 export const Engineer = {
     name: "Master Builder",
     price: 650000,
-    image: "",
+    image: ParagonImages.engi,
     attacks: [
         {
             name: "Mega Sentry Expire Explosion",

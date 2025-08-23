@@ -1,7 +1,9 @@
+import { ParagonImages } from "../images";
+
 export const BoomerangMonkey = {
     name: "Glaive Doominus",
     price: 275000,
-    image: "",
+    image: ParagonImages.boomer,
     attacks: [
         {
             name: "Glaive",

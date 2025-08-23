@@ -1,7 +1,9 @@
+import { ParagonImages } from "../images";
+
 export const WizardMonkey = {
     name: "Magus Perfectus",
     price: 750000,
-    image: "",
+    image: ParagonImages.wizard,
     attacks: [
         {
             name: "Drain Beam",

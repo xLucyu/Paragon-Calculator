@@ -1,7 +1,9 @@
+import { ParagonImages } from "../images";
+
 export const SpikeFactory = {
     name: "Mega Massive Munitions Factory",
     price: 800000,
-    image: "",
+    image: ParagonImages.spike,
     attacks: [
         {
             name: "Carpet of Spikes",

@@ -1,7 +1,9 @@
+import { ParagonImages } from "../images";
+
 export const NinjaMonkey = {
     name: "Ascended Shadow",
     price: 500000,
-    image: "",
+    image: ParagonImages.ninja,
     attacks: [
         {
             name: "Shadow Shurikens",

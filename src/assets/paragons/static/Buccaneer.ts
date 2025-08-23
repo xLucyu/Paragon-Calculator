@@ -1,7 +1,9 @@
+import { ParagonImages } from "../images";
+
 export const Buccaneer = {
     name: "Navarch of the Seas",
     price: 550000,
-    image: "",
+    image: ParagonImages.boat,
     attacks: [
         {
             name: "Plasma Turrets",

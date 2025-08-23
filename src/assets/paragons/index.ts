@@ -10,17 +10,17 @@ import {
     TackShooter,
     WizardMonkey
  } from "./static/index";
-import { Paragon } from "./interface";
+import type { Paragon } from "../../interfaces/paragon";
 
 export const paragons: Record<string, Paragon> = {
-  "Ace": AceMonkey,
+  "Dart": DartMonkey,
+  "Tack": TackShooter,
   "Boomerang": BoomerangMonkey,
   "Buccaneer": Buccaneer,
-  "Dart": DartMonkey,
-  "Engineer": Engineer,
   "Sub": MonkeySub,
+  "Ace": AceMonkey,
   "Ninja": NinjaMonkey,
-  "Spike": SpikeFactory,
-  "Tack": TackShooter,
-  "Wizard": WizardMonkey
+  "Wizard": WizardMonkey,
+  "Engineer": Engineer,
+  "Spike": SpikeFactory
 };
