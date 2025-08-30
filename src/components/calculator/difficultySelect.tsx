@@ -28,7 +28,7 @@ export default function DifficultySelect({ onDifficultyChange }: DifficultySelec
   handleClickOutsideOfComponent(dropdownRef, () => setOpen(false));
 
   // Find the currently selected difficulty
-  const selected = difficulties.find((d) => d.priceModifier === selectedDifficulty);
+  const selected = difficulties.find((difficulty) => difficulty.priceModifier === selectedDifficulty);
 
   return (
     <div ref={dropdownRef} className="relative w-85">

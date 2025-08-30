@@ -13,8 +13,7 @@ export function Calculator() {
     <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
       <DifficultySelect onDifficultyChange={setDifficultyMultiplier}/>
       <ParagonSelect onParagonChange={setSelectedParagon}/>
-      <PriceFields difficultyMultiplier={difficultyMultiplier} selectedParagon={selectedParagon}/>
-      <pre>{JSON.stringify(selectedParagon, null, 2)}</pre>
+      <PriceFields difficultyMultiplier={difficultyMultiplier} selectedParagon={selectedParagon}/> 
     </div>
   )
 }

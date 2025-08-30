@@ -1,9 +1,10 @@
 import { useState } from "react";
-import type { PowerFactors, Paragon } from "../../interfaces";
+import type { PowerFactors, Paragon, Input } from "../../interfaces";
+import { calculateParagonPower } from "../../assets/calculation/calculatePower";
 
 interface PriceFieldsProps {
-    selectedParagon: Paragon | null;
-    difficultyMultiplier: number;
+  selectedParagon: Paragon | null;
+  difficultyMultiplier: number;
 }
 
 interface Input {
@@ -13,17 +14,19 @@ interface Input {
 }
 
 export default function PriceFields({ selectedParagon, difficultyMultiplier }: PriceFieldsProps) {
-  
-    const currentPrice = selectedParagon ? selectedParagon.price * difficultyMultiplier : 0;
+
     const [factors, setFactors] = useState<PowerFactors>({
-        totems: 0,
-        pops: 0,
-        cashGenerated: 0,
-        cashSpent: 0, 
-        upgrades: 0,
-        coopUpgrades: 0,
-        cashSlider: 0
+      totems: 0,
+      pops: 0,
+      cashGenerated: 0,
+      cashSpent: 0,
+      upgrades: 0,
+      coopUpgrades: 0,
+      cashSlider: 0
     });
+
+    const [currentPower, setCurrentPower] = useState(0);
+    const currentPrice = selectedParagon ? selectedParagon.price * difficultyMultiplier : 0;
 
     const priceFactors: Input[] = [
         { key: "totems", displayName: "Geraldo Totems", max: 100 },
@@ -38,9 +41,12 @@ export default function PriceFields({ selectedParagon, difficultyMultiplier }: P
     const handleChange = (factor: Input, value: number) => {
         const clampedValue = Math.min(Math.max(value, 0), factor.max);
         setFactors((prev) => ({
-        ...prev,
-        [factor.key]: clampedValue,
+          ...prev,
+          [factor.key]: clampedValue
         }));
+        
+       // const calculatedPower = calculateParagonPower(currentPrice, currentPower);
+       // setCurrentPower(calculatedPower); 
     };
 
   return (
@@ -68,7 +74,7 @@ export default function PriceFields({ selectedParagon, difficultyMultiplier }: P
               border: "1px solid #ccc",
               borderRadius: "4px",
               marginBottom: "4px"
-            }}
+            }} 
           />
 
           <span style={{ fontSize: "0.9em", color: "#555" }}>
